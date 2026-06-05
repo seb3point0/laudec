@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Thin launcher for laudec.py — symlink this somewhere on your PATH:
+#   ln -s "$PWD/laudec" ~/.local/bin/laudec
+exec python3 "$(dirname "$(readlink -f "$0")")/laudec.py" "$@"
